@@ -1,0 +1,134 @@
+:root {
+            --primary-color: #0d6efd; /* Azul Bootstrap */
+            --secondary-color: #2c5075; /* Gris Oscuro */
+            --bg-sidebar: #f8f9fa; /* Gris muy claro */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            background-color: rgb(164, 164, 164); /* Fondo gris para que resalte la "hoja" */
+            
+        }
+
+        /* Simulación de hoja de papel A4 */
+        .cv-container {
+            background-color: white;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Estilos de la cabecera */
+        .header-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        /* ESTILO NUEVO PARA TU FOTO REAL */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Mantiene la proporción de la foto sin estirarla */
+            border-radius: 50%; /* La hace redonda */
+            border: 4px solid white; /* Borde blanco elegante */
+            display: block;
+            margin: 0 auto;
+            background-color: white; /* Fondo por si la imagen es transparente */
+        }
+
+        /* Títulos de sección */
+        .section-title {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Columna izquierda (Sidebar) */
+        .sidebar {
+            background-color: var(--bg-sidebar);
+            padding: 2rem;
+        }
+
+        /* Columna derecha (Contenido principal) */
+        .main-content {
+            padding: 2rem;
+        }
+
+        /* Elementos de contacto */
+        .contact-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item i {
+            color: var(--primary-color);
+        }
+
+        /* Skills tags */
+        .skill-badge {
+            background-color: #e7f1ff;
+            color: #0c63e4;
+            border: 1px solid rgba(12, 99, 228, 0.2);
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Timeline de experiencia */
+        .experience-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #dee2e6;
+            margin-bottom: 2rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #212529;
+        }
+
+        .company-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        /* Impresión */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .skill-badge {
+                border: 1px solid #ccc; /* Mejor contraste al imprimir */
+            }
+        }
